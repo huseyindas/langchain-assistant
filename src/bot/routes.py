@@ -23,5 +23,5 @@ def load(background_tasks: BackgroundTasks):
     loader = Loader(
         documents_path=DOCUMENTS_PATH
     )
-    background_tasks.add_task(loader.commit(), [""])
-    return True
+    background_tasks.add_task(loader.commit)
+    return {"message": "Data load started in the background."}

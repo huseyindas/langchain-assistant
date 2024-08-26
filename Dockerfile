@@ -17,4 +17,4 @@ RUN pipenv install --deploy --ignore-pipfile
 
 COPY . /backend
 
-CMD ["pipenv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["pipenv", "run", "uvicorn", "main:app", "--workers", "4", "--host", "0.0.0.0", "--port", "8000"]
