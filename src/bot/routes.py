@@ -15,7 +15,6 @@ router = APIRouter(prefix="/bot")
 async def chat(chat_request: ChatRequest):
     chain = Chain(prompt_path="./prompt.txt")
     response = chain.chat(chat_request.message)
-    logging.warn(str(chain.prompt))
     return response
 
 

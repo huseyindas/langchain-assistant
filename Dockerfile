@@ -1,5 +1,11 @@
 FROM python:3.10-slim
 
+RUN apt-get update && apt-get -y install \
+    build-essential \
+    libpq-dev \
+    python3-dev \
+    && apt-get clean
+
 WORKDIR /backend
 
 RUN pip install --upgrade pip && \
